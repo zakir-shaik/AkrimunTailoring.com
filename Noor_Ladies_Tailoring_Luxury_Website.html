@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akrimun Ladies Tailoring</title>
+ <link rel="icon" type="image/png" href="logo.png">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--olive:#556B2F;--cream:#F7F5F0;--gold:#B08D28;--text:#24301B;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:Poppins,sans-serif;background:linear-gradient(135deg,#8B7B2D,#556B2F,#32431A);padding:18px}
+.wrap{max-width:1500px;margin:auto;background:var(--cream);border-radius:24px;padding:24px}
+header{
+    background:#F7F5F0;
+    padding:15px 25px;
+    border-radius:18px;
+    position:sticky;
+    top:10px;
+    z-index:1000;
+}
+
+.header-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo-img{
+    width:70px;
+    height:70px;
+    object-fit:contain;
+}
+
+.logo-text h2{
+    margin:0;
+    font-size:30px;
+    color:#556B2F;
+    font-family:'Cormorant Garamond', serif;
+}
+
+.logo-text span{
+    font-size:12px;
+    color:#666;
+    letter-spacing:2px;
+}
+
+nav{
+    display:flex;
+    gap:30px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#24301B;
+    font-weight:500;
+}
+
+.hamburger{
+    display:none;
+    background:none;
+    border:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Mobile only */
+@media (max-width:768px){
+
+    .hamburger{
+        display:block;
+    }
+
+    nav{
+        display:none;
+        position:absolute;
+        top:90px;
+        left:20px;
+        right:20px;
+        background:#fff;
+        flex-direction:column;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 10px 25px rgba(0,0,0,.15);
+        gap:18px;
+    }
+
+    nav.active{
+        display:flex;
+    }
+
+    .logo-img{
+        width:55px;
+        height:55px;
+    }
+
+    .logo-text h2{
+        font-size:24px;
+    }
+}
+.logo{font:700 34px 'Cormorant Garamond',serif;color:var(--olive)}
+nav a{margin-left:18px;text-decoration:none;color:#333}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center;padding:40px 0}
+.tag{display:inline-block;background:#EEF1E8;color:#65783D;padding:8px 14px;border-radius:999px;font-size:12px}
+h1{font:700 72px 'Cormorant Garamond',serif;line-height:.95;color:var(--text);margin:16px 0}
+h1 span{color:var(--olive)}.btn{display:inline-block;background:var(--olive);color:#fff;padding:14px 22px;border-radius:10px;text-decoration:none}
+.hero img{width:100%;height:560px;object-fit:cover;border-radius:20px}
+.title{text-align:center;margin:50px 0 24px}.title small{letter-spacing:3px;color:var(--gold)}.title h2{font:700 42px 'Cormorant Garamond',serif;color:var(--text)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.08)}.card img{width:100%;height:793px;object-fit:cover}.card div{padding:14px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.gallery img{width:100%;height:500px;object-fit:cover;border-radius:12px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.form{background:#EEF1E8;padding:20px;border-radius:16px}input,select,textarea{width:100%;padding:12px;margin:8px 0;border:1px solid #ccc;border-radius:8px}
+.footer{
+    background:#556B2F;
+    color:#fff;
+    text-align:center;
+    padding:40px 20px;
+    border-radius:22px;
+    margin-top:60px;
+}
+
+.footer-logo img{
+    width:85px;
+    height:auto;
+    margin-bottom:12px;
+}
+
+.footer h2{
+    font-family:'Cormorant Garamond', serif;
+    font-size:34px;
+    margin-bottom:8px;
+}
+
+.tagline{
+    color:#E8E8E8;
+    font-size:15px;
+    margin-bottom:18px;
+}
+
+.divider{
+    width:90px;
+    height:1px;
+    background:rgba(255,255,255,.35);
+    margin:18px auto;
+}
+
+.copyright{
+    font-size:13px;
+    color:#D8D8D8;
+    margin-bottom:8px;
+}
+
+.developer{
+    font-size:14px;
+    color:#F3E6B3;
+}
+
+.developer strong{
+    color:#FFFFFF;
+    letter-spacing:.5px;
+}
+@media(max-width:900px){.hero,.two{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}h1{font-size:52px}.gallery img {
+    width: 100%;
+    height: 359px;
+    object-fit: cover;
+    border-radius: 12px;
+} .card img {
+    width: 100%;
+    height: 412px;
+    object-fit: cover;
+}}
+@media(max-width:600px){.grid,.gallery{grid-template-columns:1fr} .gallery img {
+    width: 100%;
+    height: 359px;
+    object-fit: cover;
+    border-radius: 12px;
+}.card img {
+    width: 100%;
+    height: 412px;
+    object-fit: cover;
+}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="header-container" style="
+    background-color: cornsilk;
+">
+
+    <div class="brand">
+      <img src="logo.png" class="logo-img" alt="Logo">
+
+      <div class="logo-text">
+        <h2>Akrimun</h2>
+        <span>Ladies Tailoring</span>
+      </div>
+    </div>
+
+    <nav id="navMenu">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#classes">Classes</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+
+  </div>
+</header>
+<section class="hero">
+<div><div class="tag">CASUAL • MARRIAGE • PROFESSIONAL</div><h1>ICONIC <span>PRESENCE</span></h1><p>Luxury tailoring for ladies & girls with marriage wear, office wear, casual kurtis, child dresses and school uniforms.</p><a class="btn" href="#contact">Book Now</a></div>
+<img src="Img1.png" alt="Hero">
+</section>
+
+<section id="services">
+<div class="title"><small>OUR SERVICES</small><h2>Ladies & Girls Collection</h2></div>
+<div class="grid">
+<div class="card"><img src="https://th.bing.com/th/id/OIP.iq8zqr1hKWaGBAVnrxM2sQHaJQ?w=208&h=260&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"><div><h3>Marriage Wear</h3><p>Bridal blouse & wedding dresses.</p></div></div>
+<div class="card"><img src="https://5.imimg.com/data5/SELLER/Default/2025/2/491419143/MM/GG/BT/96310516/jvm-2064-500x500.jpg"><div><h3>Casual Wear</h3><p>Elegant kurtis & daily outfits.</p></div></div>
+<div class="card"><img src="https://tse3.mm.bing.net/th/id/OIP.zot2ZaB2cVhW-MTH_dzhewHaQm?r=0&pid=ImgDet&w=156&h=350&c=7&dpr=1.3&o=7&rm=3"><div><h3>Professional Wear</h3><p>Office wear & formal ethnic.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1623609163859-ca93c959b98a?auto=format&fit=crop&w=800&q=80"><div><h3>Salwar Suit</h3><p>Designer custom stitching.</p></div></div>
+<div class="card"><img src="https://tse2.mm.bing.net/th/id/OIP.FnZkm-GbgG-H5etG-0IDWQHaJ4?r=0&pid=ImgDet&w=182&h=243&c=7&dpr=1.3&o=7&rm=3"><div><h3>Child Girl Wear</h3><p>Party & birthday dresses.</p></div></div>
+<div class="card"><img src="https://tse1.mm.bing.net/th/id/OIP.l2xAV2qu0oKk6MWglAAUtAHaKs?r=0&pid=ImgDet&w=182&h=263&c=7&dpr=1.3&o=7&rm=3"><div><h3>School Uniform</h3><p>Girls uniforms & alterations.</p></div></div>
+</div>
+</section>
+
+<section id="gallery">
+<div class="title"><small>EDITORIAL GALLERY</small><h2>Recent Designs</h2></div>
+<div class="gallery">
+<img src="https://cdn.klothtrend.com/imgbook/product/wc/20221229/1672322456413638891.webp">
+<img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=600&q=80">
+<img src="https://5.imimg.com/data5/HO/RS/JL/SELLER-94515757/img-20180620-wa0090-jpg-500x500.jpg">
+<img src="https://i.pinimg.com/originals/b6/1f/67/b61f672657e7d474aa00aab9d2159c47.jpg">
+</div>
+</section>
+
+<section id="contact">
+<div class="title"><small>CONTACT</small><h2>Google Map & WhatsApp</h2></div>
+<div class="two">
+<div><h3>Akrimun Ladies Tailoring</h3><p>Arif Street, Chandole, bapatla Dist, Andhra Pradesh</p><p>📞 +91 8897198152   +91 8978265977</p><p>✉ noortailoring@gmail.com</p><br><a class="btn" target="_blank" href="https://maps.app.goo.gl/Es5vAGREZxHjEkWNA">Get Directions</a><br><br><iframe style="width:100%;height:260px;border:none;border-radius:12px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d896.55559784823!2d80.6095232976894!3d16.007436557923167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a17bc6531e16f%3A0x59da27274abcaf97!2sAKRIMUN%20TAILORING%20SHOP!5e0!3m2!1sen!2sin!4v1786995339476!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe></div>
+<form class="form" onsubmit="event.preventDefault();wa()"><h3>WhatsApp Enquiry</h3><input id="n" placeholder="Name" required><input id="p" placeholder="Phone" required><select id="s"><option>Marriage Wear</option><option>Casual Wear</option><option>Professional Wear</option><option>Child Girl Wear</option></select><textarea id="m" rows="4" placeholder="Requirement"></textarea><button class="btn" style="width:100%">Send WhatsApp</button></form>
+</div>
+</section>
+
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="logo.png" alt="Akrimun Ladies Tailoring">
+    </div>
+
+    <h2>Akrimun Ladies Tailoring</h2>
+
+    <p class="tagline">
+        Luxury Boutique • Casual • Marriage • Professional Wear
+    </p>
+
+    <div class="divider"></div>
+
+    <p class="copyright">
+        © 2026 Akrimun Ladies Tailoring. All Rights Reserved.
+    </p>
+
+    <p class="developer">
+        Developed by <strong>Codefortix Technologies</strong>
+    </p>
+</div>
+<script>
+function wa(){const t=`🌿 *Akrimun Tailoring*%0AName: ${n.value}%0APhone: ${p.value}%0AService: ${s.value}%0A${m.value}`;window.open(`https://wa.me/8978265977?text=${encodeURIComponent(t)}`,'_blank')}
+
+function toggleMenu(){
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
+</body>
+</html>
